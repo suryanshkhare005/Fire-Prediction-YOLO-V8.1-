@@ -6,9 +6,9 @@ import pygame
 
 # Initialize pygame mixer for sound
 pygame.mixer.init()
-sirene_sound = pygame.mixer.Sound('sirene.mp3')
+sirene_sound = pygame.mixer.Sound('static/alert.mp3')
 
-cap = cv2.VideoCapture('fire2.mp4')
+cap = cv2.VideoCapture(0,cv2.CAP_DSHOW)
 model = YOLO('fire.pt')
 
 classnames = ['fire']
