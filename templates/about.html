@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fire Detection System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        
+        /* Navbar */
+        nav {
+            background-color: #2c3e50;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            margin-right: 20px;
+        }
+        
+        nav a:hover {
+            color: #e74c3c;
+        }
+        
+        /* Navbar Logo */
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+
+        header {
+            background-color: #2c3e50;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        section {
+            padding: 20px;
+        }
+        h2 {
+            color: #3498db;
+            font-size :1.7em;
+        }
+        p {
+            line-height: 1.6;
+            font-size: 1.2em;
+        }
+        li{
+            font-size: 1.2em;
+
+        }
+        .technology, .overview, .resources, .comparative, .conclusion , .feasibility , #about , #project-introduction , #project-description{
+            background-color: #fff;
+            margin-bottom: 20px;
+            padding: 20px 40px;
+            border-radius: 8px;
+        }
+        
+        .footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            width: 100%;
+        }
+        .alert-box {
+            background-color: #ffeb3b;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">Fire Detection System</div>
+        <div>
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/contact">Contact</a>
+        </div>
+    </nav>
+    <header>
+        <h1>Fire Detection System</h1>
+        <p>Leveraging AI for Campus Safety</p>
+    </header>
+
+
+    <!-- Navbar -->
+
+<section id="about">
+    <h2>About the Project</h2>
+    <p>
+        Our goal with this model is simple: to leverage advanced technology to create a safer environment on our campus and beyond. This project was born out of our desire to provide a faster, more reliable way to detect fire threats, using the power of AI and real-time monitoring. Today, I’ll walk you through how our model works, the technology behind it, and why it’s a powerful solution for enhancing campus safety.
+    </p>
+</section>
+
+<section id="project-introduction">
+    <h2>Project Introduction</h2>
+    <p>
+        Let me begin by explaining why we felt this project was necessary. Traditional fire detection systems, such as smoke or heat sensors, often have limitations that can lead to delayed detection or even false alarms. These systems may take time to activate, which is time we can’t afford during a fire emergency. In educational institutions, especially, safety is a top priority, and every second counts in preventing potential disasters.
+    </p>
+    <p>
+        Our model aims to overcome these limitations by providing real-time visual detection of fire or smoke. By using advanced AI and computer vision, our system captures, analyzes, and identifies fire hazards from live video feeds instantly, alerting users as soon as a threat is detected.
+    </p>
+</section>
+
+<section id="project-description">
+    <h2>Project Description</h2>
+    <p>
+        Our model uses a mobile camera to capture images in real-time. The camera connects to our system through an IP address, which allows it to transmit images directly to our computer where our fire detection model is running.
+    </p>
+    <p>
+        Here’s how it works:
+        <ol>
+            <li>The camera continuously captures images.</li>
+            <li>These images are analyzed by our model, which is trained to recognize patterns of fire or smoke.</li>
+            <li>If any sign of fire is detected, the model immediately sounds an alarm.</li>
+        </ol>
+    </p>
+    <p>
+        This rapid response capability can greatly reduce the impact of fire incidents, as it enables faster, more informed intervention. Additionally, our model has an impressive 93% accuracy rate, which means it can reliably identify fire patterns and reduce the chances of false alarms.
+    </p>
+</section>
+
+<section id="technologies-used" class="technology">
+    <h2>Technologies Used</h2>
+    <ul>
+        <li><strong>Google Colab:</strong> We developed and trained our model in Google Colab.</li>
+        <li><strong>Python:</strong> Our entire project was coded in Python, leveraging its versatility and extensive libraries.</li>
+        <li><strong>Ultralytics YOLOv8:</strong> YOLOv8 is the object detection model used for real-time fire detection.</li>
+        <li><strong>OpenCV:</strong> OpenCV captures and processes video frames for analysis by YOLOv8.</li>
+        <li><strong>PyGame:</strong> Used to implement the audio alert system for fire detection.</li>
+        <li><strong>Adam W Optimizer:</strong> Used for training the model efficiently.</li>
+    </ul>
+</section>
+
+<section id="workflow" class="overview">
+    <h2>Project Overview and Workflow</h2>
+    <p>
+        Our fire detection model operates through several steps:
+        <ul>
+            <li><strong>Image Capture:</strong> The mobile camera captures images in real-time and sends them to our model.</li>
+            <li><strong>Preprocessing:</strong> Images are normalized for better analysis.</li>
+            <li><strong>Fire Detection:</strong> YOLOv8 analyzes each frame to detect fire or smoke.</li>
+            <li><strong>Alert System:</strong> An alarm is triggered when fire is detected, notifying users instantly.</li>
+        </ul>
+    </p>
+</section>
+
+<section id="resources" class="resources">
+    <h2>Resources and Training Data</h2>
+    <p>
+        Our model was trained on a dataset of over 1,390 images—640 images collected by us, and 750 sourced from diverse scenarios to expand the training set. Data augmentation techniques helped improve the robustness of the model, allowing it to recognize fire patterns accurately in different environments.
+    </p>
+</section>
+
+<section id="comparative-analysis" class="comparative">
+    <h2>Comparative Analysis</h2>
+    <p>
+        Compared to traditional fire alarm systems, which often rely on smoke or temperature changes, our model provides real-time visual detection of fire, reducing false alarms and enabling faster intervention. With its ability to detect fire at its earliest stages, the system helps prevent widespread damage.
+    </p>
+</section>
+
+<section id="feasibility" class="feasibility">
+    <h2>Feasibility and Viability</h2>
+    <p>
+        Our system is cost-effective and scalable, designed to integrate with existing campus camera systems. Its adaptability makes it an ideal solution for educational and public institutions.
+    </p>
+</section>
+
+<section id="conclusion" class="conclusion">
+    <h2>Conclusion</h2>
+    <p>
+        In conclusion, our Fire Detection Model, powered by AI and real-time monitoring, enhances campus safety by providing fast, accurate alerts. We are confident that this technology can make a significant impact on fire prevention.
+    </p>
+</section>
+
+ <footer class="footer">
+    <p>&copy; 2024 Fire Detection Project | PSIT Tech Expo</p>
+</footer>  
+
+</body>
+</html>
